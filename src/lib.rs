@@ -11,7 +11,9 @@ mod dns;
 mod error;
 
 pub use config::Config;
+pub use config::RecordInfo;
 pub use error::SimpleDnsError;
+pub use trust_dns_proto::rr::RecordType;
 
 pub struct SimpleDns {
     addr: SocketAddr,
