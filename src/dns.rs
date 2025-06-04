@@ -57,7 +57,7 @@ pub(crate) fn get_record_name(name: &str, domain: &str) -> Result<Name, SimpleDn
     let name = match name {
         "@" => Name::from_str(domain)?,
         _ => {
-            let name = format!("{}.{}.", name, domain);
+            let name = format!("{name}.{domain}.");
             Name::from_str(&name)?
         }
     };
